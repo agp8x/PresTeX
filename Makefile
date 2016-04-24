@@ -1,6 +1,6 @@
 I =
 MAINFILE = presentation
-DOTTYPE = png
+DOTTYPE = pdf
 full:
 	pdflatex -synctex=1 -interaction=nonstopmode $(MAINFILE)$(I).tex
 	bibtex $(MAINFILE)$(I)
