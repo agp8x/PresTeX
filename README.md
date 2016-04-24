@@ -38,22 +38,20 @@ Using make, there are different targets available:
 
 Parameters:
 
-* MAINFILE: main .tex-file name (without extension, default: presentation)
-* DOTTYPE: output format for target `dot` (default: png)
-* I: appendix to MAINFILE (default: empty)
+* `MAINFILE`: main .tex-file name (without extension, default: presentation)
+* `DOTTYPE`: output format for target `dot` (default: png)
+* `I`: appendix to MAINFILE (default: empty)
 
 Per default, `presentation.tex` will be compiled.
 
 #### Multiple presentations
 
-To simplify the creation of multiple presentations (e.g. three sets of slides accompanying a bachelor's / master's thesis), there is a parameter I.
-
 * copy `presentation.tex` to `presentation2.tex` (or `presentationFoo.tex` or ...; you get the point)
 * add the following lines after `\input{config/commands}` (approx. line #30):
-'''
+```latex
 \subtitle{subtitle for presentation2.tex}
 \date{date for presentation2.tex}
-'''
+```
 * if needed, create a new bibliography and reference it
 * to compile the newly created presentation, append `I=2` (or ...) to any `make` command, e.g. `make latex I=2`
 * repeat with I++;
